@@ -3,7 +3,7 @@ package inputFieldController
 import interactor.Interactor
 
 class InputFieldController(val interactor : Interactor){
-    fun callInteractor(){
-
+    fun callInteractor(inputField: String) {
+        interactor.checkSingers(inputField,)
     }
 }

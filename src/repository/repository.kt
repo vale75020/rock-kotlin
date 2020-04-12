@@ -1,7 +1,9 @@
 package repository
 
+
+
 interface Repository{
-    fun findRockInfo(){
+    fun callRockDataSource(inputField: String){
 
     }
 }
