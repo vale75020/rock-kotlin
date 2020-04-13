@@ -3,13 +3,11 @@ package interactor
 import repository.RepositoryImpl
 import rockPresenter.EmptyPresenter
 import rockPresenter.ErrorPresenter
-import rockPresenter.NotImplementedPresenter
 import rockPresenter.RockPresenter
 
 class Interactor (
     val repository: RepositoryImpl,
     val rockPresenter: RockPresenter,
-    val notImplementedPresenter: NotImplementedPresenter,
     val emptyPresenter: EmptyPresenter,
     val errorPresenter: ErrorPresenter) {
 
@@ -23,7 +21,11 @@ class Interactor (
         }
     }
 
-    fun checkData(){
-
+    fun checkData(response: String?): String?{
+        if(response == null){
+            errorPresenter.errorPresenter(response)
+        }else {
+            rockPresenter.presentRock(response)
+        }
     }
 }

@@ -1,7 +1,8 @@
 package vue
 
-import rockPresenter.RockPresenter
 
-class RockVue(val rockPresenter: RockPresenter) {
-
+class RockVue() {
+    fun displayRockVue(checkData: String) {
+        println(checkData)
+    }
 }

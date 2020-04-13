@@ -1,9 +1,10 @@
 package rockPresenter
 
-import interactor.Interactor
+import vue.ErrorVue
 
-class ErrorPresenter( val interactor: Interactor) {
-    fun errorPresenter(){
 
+class ErrorPresenter( val errorVue: ErrorVue) {
+    fun errorPresenter(response: String) {
+        errorVue.displayVue(response)
     }
 }

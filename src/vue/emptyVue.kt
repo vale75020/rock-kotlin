@@ -1,9 +1,7 @@
 package vue
 
-import rockPresenter.EmptyPresenter
-
-class EmptyVue(val presenter: EmptyPresenter){
+class EmptyVue(){
     fun emptyVue(message: String){
-
+        println(message)
     }
 }

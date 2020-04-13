@@ -1,7 +1,8 @@
 package vue
 
-import rockPresenter.ErrorPresenter
 
-class ErrorVue(val errorPresenter: ErrorPresenter) {
-
+class ErrorVue() {
+    fun displayVue(response: String) {
+        println(response)
+    }
 }
