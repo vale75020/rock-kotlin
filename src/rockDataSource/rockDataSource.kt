@@ -1,11 +1,11 @@
 package rockDataSource
 
 class RockDataSource() {
-    fun rockDataBase(inputField: String?): String {
+    fun rockDataBase(inputField: String): String {
         var rockData = ""
-        if (inputField == null) {
-            rockData = "Error Server - this type is not supported"
-        } else {
+       // if (inputField == null) {
+        //    rockData = "Error Server - this type is not supported"
+      //  } else {
             if (inputField == "Pink Floyd") {
                 rockData =
                     "Pink Floyd est un groupe rock britannique originaire de Londres, en Angleterre. Le groupe a débuté avec un premier album de musique psychédélique pour ensuite bifurquer vers le rock progressif. Formé en 1965, il est considéré comme un pionnier et un représentant majeur de ces styles musicaux. Il est reconnu pour sa musique planante et expérimentale, ses textes philosophiques et satiriques, ses albums-concept et ses performances en concert originales et élaborées. De ses débuts à aujourd'hui, le groupe a vendu plus de 360 millions d'albums à travers le monde2,3. Aux seuls États-Unis, les ventes des albums de Pink Floyd sont dénombrées par la RIAA à hauteur de 85 millions d'exemplaires"
@@ -18,7 +18,7 @@ class RockDataSource() {
             } else {
                 rockData = "No singers with this name in this database still"
             }
-        }
+      //  }
         return rockData
     }
 }

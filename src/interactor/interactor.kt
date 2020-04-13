@@ -12,20 +12,15 @@ class Interactor (
     val errorPresenter: ErrorPresenter) {
 
     fun checkSingers(inputField: String){
-        repository.callRockDataSource(inputField)
-        if (inputField != "") {
-            repository.callRockDataSource(inputField)
-        }else {
+        val res: String = repository.callRockDataSource(inputField).toString()
+        if(inputField == "") {
             val message = "This field is required"
             emptyPresenter.callEmptyVue(message)
         }
-    }
-
-    fun checkData(response: String?): String?{
-        if(response == null){
-            errorPresenter.errorPresenter(response)
+        else if (inputField != "") {
+            rockPresenter.presentRock(res)
         }else {
-            rockPresenter.presentRock(response)
+            errorPresenter.errorPresenter(res)
         }
     }
 }
